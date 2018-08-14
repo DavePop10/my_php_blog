@@ -10,7 +10,7 @@ if (isset($_POST['submit']) && ($_POST['submit'] != "")) {
         $Reguser->pwd=$_POST['pwd'];
 
         if($_POST['pwd']){ 
-            var_dump($Reguser);
+            //var_dump($Reguser);
             $result ="";
             $result = $Reguser->register();
             
@@ -36,13 +36,13 @@ if (isset($_POST['submit']) && ($_POST['submit'] != "")) {
         $Loguser->pwd=$_POST['pwd']; 
         $count = "";
         $count = $Loguser->login();
-        var_dump($count);
+        //var_dump($count);
         if ($count == 1) 
         {
                 //set session
              
                 
-                    header("location:index.php");
+                    header("location:members/admin.html");
                     die;
                 
                 
@@ -129,7 +129,7 @@ if (isset($_POST['submit']) && ($_POST['submit'] != "")) {
                                     <?php echo $msglog; $msglog=""; ?>
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-username">Email</label>
-				                        	<input type="text" name="email" placeholder="Email..." class="form-username form-control" id="form-email">
+				                        	<input type="email" name="email" placeholder="Email..." class="form-username form-control" id="form-email">
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-password">Password</label>
@@ -184,7 +184,7 @@ if (isset($_POST['submit']) && ($_POST['submit'] != "")) {
 				                        </div>
                                         <div class="form-group">
 				                        	<label class="sr-only" for="form-last-name">Email</label>
-				                        	<input type="text" name="Email" placeholder="Email...." class="form-email form-control" id="form-email">
+				                        	<input type="email" name="Email" placeholder="Email...." class="form-email form-control" id="form-email">
 				                        </div>
 				                        
                                         <div class="form-group">
