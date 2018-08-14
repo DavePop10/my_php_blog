@@ -1,5 +1,4 @@
-<?php 
-	
+<?php 	
 	function dbconn(){
 		$servername= "localhost";
 		$username="root";
